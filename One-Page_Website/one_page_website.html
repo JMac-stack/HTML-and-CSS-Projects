@@ -3,6 +3,8 @@
 	<head lang="en">
 		<meta charset="UTF-8">
 		<title>The Best Pets</title>
+		<script src="./JS/one_page_website.js" defer></script>
+		<link rel="stylesheet" href="./CSS/one_page_website.css"/> 
 	</head>
 	<body>
 	
@@ -37,7 +39,7 @@
 				
 					<!-- PHOTO-CONTAINER 1 -->
 					<div>
-						<div>
+						<div onclick="openModal(0)">
 							<img src="./Images/Dog_1.jpg" alt="Dog">
 							<div>
 								<h3>Dogs</h3>
@@ -49,7 +51,7 @@
 					
 					<!-- PHOTO-CONTAINER 2 -->
 					<div>
-						<div>
+						<div onclick="openModal(1)">
 							<img src="./Images/Cat_1.jpg" alt="Cat">
 							<div>
 								<h3>Cats</h3>
@@ -61,7 +63,7 @@
 					
 					<!-- PHOTO-CONTAINER 3 -->
 					<div>
-						<div>
+						<div onclick="openModal(2)">
 							<img src="./Images/Hamster_1.jpg" alt="Hamster">
 							<div>
 								<h3>Hamsters</h3>
@@ -75,6 +77,42 @@
 			</div>
 		</section>
 		<!-- END GALLERY -->
+
+		<!--LIGHBOX-->
+		<div id="modal">
+			<h1>Images</h1>
+			<span class="x" onclick="closeModal()">&times;</span>
+			<div class="content">
+				<div id="bigImages">
+					<div class="bigImage">
+						<img src="./Images/Dog_1_Big.jpg" alt="Dog">
+					</div>
+
+					<div class="bigImage">
+						<img src="./Images/Cat_1_Big.jpg" alt="Dog">
+					</div>
+
+					<div class="bigImage">
+						<img src="./Images/Hamster_1_Big.jpg" alt="Dog">
+					</div>
+				</div>
+
+				<div id="slides">
+					<div class="slide" onclick="openModal(0)">
+						<img src="./Images/Dog_1.jpg" alt="Dog">
+					</div>
+
+					<div class="slide" onclick="openModal(1)">
+						<img src="./Images/Cat_1.jpg" alt="Dog">
+					</div>
+
+					<div class="slide" onclick="openModal(2)">
+						<img src="./Images/Hamster_1.jpg" alt="Dog">
+					</div>
+				</div>
+
+			</div>
+		</div>
 		
 		<!-- VIDEO -->
 		<section>
