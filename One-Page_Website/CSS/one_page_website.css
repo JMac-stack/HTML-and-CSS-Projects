@@ -1,6 +1,5 @@
 .slide {
     float: left;
-    width: 33%;
   }
 
 #modal {
@@ -27,4 +26,10 @@
 
 .bigImage {
   display: none;
+}
+
+#bigImages {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
