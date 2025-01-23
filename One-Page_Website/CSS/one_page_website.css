@@ -1,3 +1,22 @@
+/*STEP 1*/
+body {
+  font-family: sans-serif;
+  font-size: 1.5em;
+}
+
+/*STEP 2*/
+input[type="text"] {
+  margin-bottom: 5px;
+  width: 200px;
+  border-radius: 5px;
+  border: solid red 2px;
+}
+
+input[type="submit"] {
+   margin-left: 150px;
+
+}
+
 .slide {
     float: left;
   }
