@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Challenge_5-8</title>
+        <style>
+            .container {
+                position: relative;
+                width: 50%;
+            }
+            .image {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+            .overlay {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                transition: 1s ease;
+                background-color: gray;
+            }
+            .container:hover .overlay {
+                opacity: 0.8;
+            }
+
+            p {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div class="container">
+                <img src="./img/img_123.png" class="image"/>
+                <div class="overlay">
+                    <p>Hello</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
