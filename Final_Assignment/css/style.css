@@ -11,6 +11,14 @@ body {
     text-align: center;
 }
 
+img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: 330px;
+    display: block;
+    margin: auto;
+}
+
 /*** NAV BAR***/
 .navbar {
     overflow: hidden;
@@ -50,11 +58,10 @@ body {
 
 #video {
     position: fixed;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
     right: 0;
     bottom: 0;
+    min-width: 100%;
+    z-index: -1;
 }
 
 .overlay {
@@ -68,4 +75,62 @@ body {
     #video {
         display: none;
     }
+}
+
+/*** TABLE STYLING ***/
+
+* {
+    box-sizing:border-box;
+}
+
+.column_1 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 3%;
+    height: 400px;
+    background-color: white;
+}
+
+@media screen and (max-width: 576px) {
+    .column_1 {
+        overflow: auto;
+    }
+}
+
+.column_2 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 3%;
+    height: 400px;
+    background-color: darkblue;
+}
+
+.column_tall {
+    height: 500px;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/*** CONTACT ***/
+
+input[type=text] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    resize: vertical;
+}
+
+/*** FOOTER ***/
+footer {
+    padding: 2%;
+    background-color: white;
 }
