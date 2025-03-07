@@ -4,12 +4,50 @@
 		<title>Basic HTML 1</title>
 		<meta charset="utf-8">
 		<script src="Basic_JavaScript_1.js"></script>
+		<style>
+			h1 {
+				font-size: 10vw;
+			}
+
+			body {
+				opacity: 1;
+				transition: 5s opacity;
+			}
+
+			body.fade-out {
+				opacity: 0;
+				transition: none;
+			}
+		
+		</style>
+			<script>
+				window.addEventListener('DOMContentLoaded', () => {
+					document.body.classList.remove('fade-out');
+				});
+
+				function validateForm() {
+					let x = document.forms["myForm"]["phoneNumber"].value;
+					if(x == "") {
+						alert("Please enter your phone number.");
+						return false;
+					}
+				}
+			</script>
 	</head>
 	<body>
+		<script>
+			document.body.classList.add('fade-out');
+		</script>
 		<h1><font color="purple" face="comic sans MS"><u><i>Practice</i></u></font></h1>
 		<p><font color="red" size="1">This is paragraph 1.</font></p>
 		<p><font color="#FF0000" size="7" face="impact">This is <b>paragraph</b> 2.</font></p>
 		<p><font color="blue" size="4">This is paragraph 3.</font></p>
 		<br>
 		<img src="..\Images\dog_1.png" alt="Dog">
+
+		<form id="myForm" onsubmit="return validateForm()">
+			<label for="phoneNumber">Phone Number:</label> <br>
+			<input type="text" id="phoneNumber" placeholder="Phone Number"></input>
+			<input type="submit" value="Submit">
+		</form>
 	</body>
